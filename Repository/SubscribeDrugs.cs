@@ -31,11 +31,11 @@ namespace SubscriptionService.Repository
               var drugs = "";
               var query = prescription.DrugName;
               HttpClient client = new HttpClient();
-<<<<<<< HEAD
+
               HttpResponseMessage result = client.GetAsync("https://localhost:44393/api/DrugsApi/searchDrugsByName/" + query ).Result;
-=======
-              HttpResponseMessage result = client.GetAsync("https://localhost:44393/api/DrugsApi/searchDrugsByName/"+query ).Result;
->>>>>>> 7caff63bde259026491a469538a5328790147da2
+
+            
+
               if (result.IsSuccessStatusCode)
               {
                   drugs = result.Content.ReadAsStringAsync().Result;
