@@ -15,26 +15,25 @@ namespace SubscriptionService.Controllers
        
         ISubscribeDrugs subscribeDrugs;
         static readonly log4net.ILog _log4net = log4net.LogManager.GetLogger(typeof(SubscribeController));
+        
         public SubscribeController(ISubscribeDrugs subscribeDrugs1)
         {
             subscribeDrugs = subscribeDrugs1;
         }
-        [HttpPost]
-
-        public SubscriptionDetails PostSubscribe([FromBody]PrescriptionDetails details, string PolicyDetails, int MemberId)
+        
+        [HttpPost("{PolicyDetails}/{MemberId}")]
+        public SubscriptionDetails PostSubscribe([FromBody]PrescriptionDetails details,[FromRoute] string PolicyDetails, int MemberId)
         {
             _log4net.Info("Subscription Request is raised from client side and input is prescription details");
             return subscribeDrugs.PostSubscribe(details,PolicyDetails,MemberId);
-
         }
      
-        [HttpPost]
-        public SubscriptionDetails PostUnsubscribe(int MemberId,int SubscriptionId)
+        [HttpPost("{MemberId}/{SubscriptionId}")]
+        public SubscriptionDetails PostUnsubscribe([FromRoute]int MemberId,int SubscriptionId)
         {
             _log4net.Info("UnSubscribe Request is raised from client side and input is Subscription id");
             return subscribeDrugs.PostUnSubscribe(MemberId, SubscriptionId);
         }
-        
         
     }
 }
