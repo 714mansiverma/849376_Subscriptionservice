@@ -22,17 +22,17 @@ namespace SubscriptionService.Controllers
         }
         
         [HttpPost("{PolicyDetails}/{MemberId}")]
-        public SubscriptionDetails PostSubscribe([FromBody]PrescriptionDetails details,[FromRoute] string PolicyDetails, int MemberId)
+        public IActionResult PostSubscribe([FromBody]PrescriptionDetails details,[FromRoute] string PolicyDetails, int MemberId)
         {
             _log4net.Info("Subscription Request is raised from client side and input is prescription details");
-            return subscribeDrugs.PostSubscribe(details,PolicyDetails,MemberId);
+            return Ok(subscribeDrugs.PostSubscribe(details,PolicyDetails,MemberId));
         }
      
         [HttpPost("{MemberId}/{SubscriptionId}")]
-        public SubscriptionDetails PostUnsubscribe([FromRoute]int MemberId,int SubscriptionId)
+        public IActionResult PostUnsubscribe([FromRoute]int MemberId,int SubscriptionId)
         {
             _log4net.Info("UnSubscribe Request is raised from client side and input is Subscription id");
-            return subscribeDrugs.PostUnSubscribe(MemberId, SubscriptionId);
+            return Ok(subscribeDrugs.PostUnSubscribe(MemberId, SubscriptionId));
         }
         
     }
