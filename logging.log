@@ -253,3 +253,19 @@ INFO  06:34:31 Drug Available
 INFO  06:34:58 Subscription Request is raised from client side and input is prescription details
 INFO  06:34:59 DruApi si being called to check for the availability of the particular drug
 INFO  06:35:18 Drug NotAvailable
+INFO  08:21:57 Application started. Press Ctrl+C to shut down.
+INFO  08:21:57 Application started. Press Ctrl+C to shut down.
+INFO  08:21:57 Hosting environment: Development
+INFO  08:21:57 Hosting environment: Development
+INFO  08:21:57 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  08:21:57 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  08:22:08 UnSubscribe Request is raised from client side and input is Subscription id
+INFO  08:22:08 Checking for Subscription 
+INFO  08:22:08 interacting with refill microservice for the payment status of the partiular subscription id 
+INFO  08:22:08 Unsubscribe successfull 
+INFO  08:22:16 UnSubscribe Request is raised from client side and input is Subscription id
+INFO  08:22:16 Checking for Subscription 
+INFO  08:22:16 interacting with refill microservice for the payment status of the partiular subscription id 
+INFO  08:23:06 UnSubscribe Request is raised from client side and input is Subscription id
+INFO  08:23:06 Checking for Subscription 
+INFO  08:23:06 Payment Due! To Unscription please clear your due payments 

@@ -50,23 +50,27 @@ namespace SubscriptionService.Repository
 
             // Get the data from refill microservice 
             _log4net.Info("Checking for Subscription ");
-            
 
-               
-            if(details.Find(p=>p.Id == id)!=null)    
+
+            var subs = details.Find(p => p.Id == id);
+            if(subs!=null)    
             {
                     _log4net.Info("interacting with refill microservice for the payment status of the partiular subscription id ");
                     RefillOrderDetails refill = new RefillOrderDetails() { Id = 1, DrugQuantity = 20, Payment = true, RefillDate = Convert.ToDateTime("2020-12-01 01:01:00 AM"), RefillDelivered = true };
                     if (refill.Id == id && refill.Payment == true)
                     {
                         _log4net.Info("Unsubscribe successfull ");
-                        return new SubscriptionDetails { Id = id, MemberId = 1, MemberLocation = "Delhi", PrescriptionId = 101, RefillOccurrence = "weekly", Status = true, SubscriptionDate = Convert.ToDateTime("2020-12-01 01:01:00 AM") };
+                        return new SubscriptionDetails { Id = id, MemberId = subs.MemberId, MemberLocation = subs.MemberLocation, PrescriptionId = subs.PrescriptionId, RefillOccurrence = subs.RefillOccurrence, Status = true, SubscriptionDate = subs.SubscriptionDate };
 
                     }
-                }
+                    else
+                    {
+                    return new SubscriptionDetails { Id = id, MemberId = subs.MemberId, MemberLocation = subs.MemberLocation, PrescriptionId = subs.PrescriptionId, RefillOccurrence = subs.RefillOccurrence, Status = false, SubscriptionDate = subs.SubscriptionDate };
+                    }
+            }
             
             _log4net.Info("Payment Due! To Unscription please clear your due payments ");
-            return new SubscriptionDetails { Id = 0, MemberId = 0, MemberLocation = "", PrescriptionId =0, RefillOccurrence = "", Status = false, SubscriptionDate = Convert.ToDateTime("2020-12-01 01:01:00 AM") };
+            return new SubscriptionDetails { Id = 0 , MemberId = 0, MemberLocation = "", PrescriptionId =0, RefillOccurrence = "", Status = false, SubscriptionDate = Convert.ToDateTime("2020-12-01 01:01:00 AM") };
 
         }
     }
