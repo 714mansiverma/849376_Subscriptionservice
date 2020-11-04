@@ -21,18 +21,18 @@ namespace SubscriptionService.Controllers
         }
         [HttpPost]
 
-        public SubscriptionDetails PostSubscribe(PrescriptionDetails details)
+        public SubscriptionDetails PostSubscribe([FromBody]PrescriptionDetails details, string PolicyDetails, int MemberId)
         {
             _log4net.Info("Subscription Request is raised from client side and input is prescription details");
-            return subscribeDrugs.PostSubscribe(details);
+            return subscribeDrugs.PostSubscribe(details,PolicyDetails,MemberId);
 
         }
      
-        [HttpPost("{id}")]
-        public SubscriptionDetails PostUnsubscribe(int id)
+        [HttpPost]
+        public SubscriptionDetails PostUnsubscribe(int MemberId,int SubscriptionId)
         {
             _log4net.Info("UnSubscribe Request is raised from client side and input is Subscription id");
-            return subscribeDrugs.PostUnSubscribe(id);
+            return subscribeDrugs.PostUnSubscribe(MemberId, SubscriptionId);
         }
         
         

@@ -23,7 +23,7 @@ namespace SubscriptionService.Repository
 
              };
         }
-        public SubscriptionDetails PostSubscribe([FromBody] PrescriptionDetails prescription, string PolicyDetails, int Member_Id)
+        public SubscriptionDetails PostSubscribe(PrescriptionDetails prescription, string PolicyDetails, int Member_Id)
         {
             _log4net.Info("DruApi si being called to check for the availability of the particular drug");
             // Drug drug = new Drug() { DrugId = 1, EpiryDate = new DateTime(1999, 12, 20), Id = 1, ManufactureDate = Convert.ToDateTime("2020-12-01 01:01:00 AM"), ManufacturerName = "XYZ", Name = "Paracetamol" };
@@ -40,7 +40,7 @@ namespace SubscriptionService.Repository
             if (drugs != "")
             {
                 _log4net.Info("Drug Available");
-                return new SubscriptionDetails { Id = 1, MemberId = Member_Id, MemberLocation = "Delhi", PrescriptionId = prescription.Id, RefillOccurrence = "weekly", Status = true, SubscriptionDate = Convert.ToDateTime("2020-12-01 01:01:00 AM") };
+                return new SubscriptionDetails { Id = 1, MemberId = Member_Id, MemberLocation = "Delhi", PrescriptionId = prescription.Id, RefillOccurrence = prescription.RefillOccurrence, Status = true, SubscriptionDate = DateTime.Now };
             }
             else
             {

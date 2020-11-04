@@ -269,3 +269,50 @@ INFO  08:22:16 interacting with refill microservice for the payment status of th
 INFO  08:23:06 UnSubscribe Request is raised from client side and input is Subscription id
 INFO  08:23:06 Checking for Subscription 
 INFO  08:23:06 Payment Due! To Unscription please clear your due payments 
+INFO  09:16:57 Application started. Press Ctrl+C to shut down.
+INFO  09:16:57 Application started. Press Ctrl+C to shut down.
+INFO  09:16:57 Hosting environment: Development
+INFO  09:16:57 Hosting environment: Development
+INFO  09:16:57 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  09:16:57 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  09:17:55 Subscription Request is raised from client side and input is prescription details
+INFO  09:17:55 DruApi si being called to check for the availability of the particular drug
+INFO  09:18:14 Drug Available
+INFO  09:19:53 Application started. Press Ctrl+C to shut down.
+INFO  09:19:53 Application started. Press Ctrl+C to shut down.
+INFO  09:19:53 Hosting environment: Development
+INFO  09:19:53 Hosting environment: Development
+INFO  09:19:53 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  09:19:53 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  09:20:46 Subscription Request is raised from client side and input is prescription details
+INFO  09:20:46 DruApi si being called to check for the availability of the particular drug
+INFO  09:20:55 Drug Available
+INFO  09:22:01 Subscription Request is raised from client side and input is prescription details
+INFO  09:22:01 DruApi si being called to check for the availability of the particular drug
+INFO  09:22:06 Drug Available
+INFO  09:22:33 Subscription Request is raised from client side and input is prescription details
+INFO  09:22:33 DruApi si being called to check for the availability of the particular drug
+INFO  09:22:39 Drug NotAvailable
+INFO  09:27:18 Application started. Press Ctrl+C to shut down.
+INFO  09:27:18 Application started. Press Ctrl+C to shut down.
+INFO  09:27:18 Hosting environment: Development
+INFO  09:27:18 Hosting environment: Development
+INFO  09:27:18 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  09:27:18 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  09:29:26 Application started. Press Ctrl+C to shut down.
+INFO  09:29:26 Application started. Press Ctrl+C to shut down.
+INFO  09:29:26 Hosting environment: Development
+INFO  09:29:26 Hosting environment: Development
+INFO  09:29:26 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  09:29:26 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  09:29:49 UnSubscribe Request is raised from client side and input is Subscription id
+INFO  09:29:49 Checking for Subscription 
+INFO  09:29:49 interacting with refill microservice for the payment status of the partiular subscription id 
+INFO  09:29:49 Unsubscribe successfull 
+INFO  09:30:01 UnSubscribe Request is raised from client side and input is Subscription id
+INFO  09:30:01 Checking for Subscription 
+INFO  09:30:01 Payment Due! To Unscription please clear your due payments 
+INFO  09:30:05 UnSubscribe Request is raised from client side and input is Subscription id
+INFO  09:30:05 Checking for Subscription 
+INFO  09:30:05 interacting with refill microservice for the payment status of the partiular subscription id 
+INFO  09:30:05 Unsubscribe successfull 
