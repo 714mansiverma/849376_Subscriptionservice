@@ -27,17 +27,18 @@ namespace SubscriptionService.Repository
         {
             _log4net.Info("DruApi si being called to check for the availability of the particular drug");
             // Drug drug = new Drug() { DrugId = 1, EpiryDate = new DateTime(1999, 12, 20), Id = 1, ManufactureDate = Convert.ToDateTime("2020-12-01 01:01:00 AM"), ManufacturerName = "XYZ", Name = "Paracetamol" };
-
+            List<LocationWiseDrug> location = new List<LocationWiseDrug>();
               var drugs = "";
               var query = prescription.DrugName;
               HttpClient client = new HttpClient();
-              HttpResponseMessage result = client.GetAsync("https://localhost:44393/api/DrugsApi/GetByName/"+query ).Result;
+              HttpResponseMessage result = client.GetAsync("https://localhost:44393/api/DrugsApi/searchDrugsByName/" + query ).Result;
               if (result.IsSuccessStatusCode)
               {
                   drugs = result.Content.ReadAsStringAsync().Result;
+                location= JsonConvert.DeserializeObject<List<LocationWiseDrug>>(drugs);
 
-              }
-            if (drugs != "")
+            }
+            if (location.Count!=0)
             {
                 _log4net.Info("Drug Available");
                 return new SubscriptionDetails { Id = 1, MemberId = Member_Id, MemberLocation = "Delhi", PrescriptionId = prescription.Id, RefillOccurrence = prescription.RefillOccurrence, Status = true, SubscriptionDate = DateTime.Now };
@@ -64,16 +65,19 @@ namespace SubscriptionService.Repository
                     if (count>0)
                     {
                         _log4net.Info("Unsubscribe successfull ");
+                        //subscribed and payment successful
                         return new SubscriptionDetails { Id = Subscription_Id, MemberId = Member_Id, MemberLocation = subs.MemberLocation, PrescriptionId = subs.PrescriptionId, RefillOccurrence = subs.RefillOccurrence, Status = true, SubscriptionDate = subs.SubscriptionDate };
 
                     }
                     else
                     {
-                    return new SubscriptionDetails { Id = Subscription_Id, MemberId = subs.MemberId, MemberLocation = subs.MemberLocation, PrescriptionId = subs.PrescriptionId, RefillOccurrence = subs.RefillOccurrence, Status = false, SubscriptionDate = subs.SubscriptionDate };
+                    //subscribed but payment not successfull
+                        return new SubscriptionDetails { Id = Subscription_Id, MemberId = subs.MemberId, MemberLocation = subs.MemberLocation, PrescriptionId = subs.PrescriptionId, RefillOccurrence = subs.RefillOccurrence, Status = false, SubscriptionDate = subs.SubscriptionDate };
                     }
             }
             
             _log4net.Info("Payment Due! To Unscription please clear your due payments ");
+            //not subscribed
             return new SubscriptionDetails { Id = 0 , MemberId = 0, MemberLocation = "", PrescriptionId =0, RefillOccurrence = "", Status = false, SubscriptionDate = Convert.ToDateTime("2020-12-01 01:01:00 AM") };
 
         }

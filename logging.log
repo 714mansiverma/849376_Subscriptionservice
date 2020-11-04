@@ -316,3 +316,98 @@ INFO  09:30:05 UnSubscribe Request is raised from client side and input is Subsc
 INFO  09:30:05 Checking for Subscription 
 INFO  09:30:05 interacting with refill microservice for the payment status of the partiular subscription id 
 INFO  09:30:05 Unsubscribe successfull 
+INFO  10:02:13 Application started. Press Ctrl+C to shut down.
+INFO  10:02:13 Application started. Press Ctrl+C to shut down.
+INFO  10:02:13 Hosting environment: Development
+INFO  10:02:13 Hosting environment: Development
+INFO  10:02:13 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  10:02:13 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  10:02:53 Subscription Request is raised from client side and input is prescription details
+INFO  10:02:53 DruApi si being called to check for the availability of the particular drug
+INFO  10:04:09 Application started. Press Ctrl+C to shut down.
+INFO  10:04:09 Application started. Press Ctrl+C to shut down.
+INFO  10:04:09 Hosting environment: Development
+INFO  10:04:09 Hosting environment: Development
+INFO  10:04:09 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  10:04:09 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  10:04:45 Subscription Request is raised from client side and input is prescription details
+INFO  10:04:45 DruApi si being called to check for the availability of the particular drug
+INFO  10:04:52 Drug Available
+INFO  10:45:06 Application started. Press Ctrl+C to shut down.
+INFO  10:45:06 Application started. Press Ctrl+C to shut down.
+INFO  10:45:06 Hosting environment: Development
+INFO  10:45:06 Hosting environment: Development
+INFO  10:45:06 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  10:45:06 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  10:46:00 Application started. Press Ctrl+C to shut down.
+INFO  10:46:00 Application started. Press Ctrl+C to shut down.
+INFO  10:46:00 Hosting environment: Development
+INFO  10:46:00 Hosting environment: Development
+INFO  10:46:00 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  10:46:00 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  10:46:41 Subscription Request is raised from client side and input is prescription details
+INFO  10:46:41 DruApi si being called to check for the availability of the particular drug
+INFO  10:46:42 Drug Available
+INFO  11:04:33 Application started. Press Ctrl+C to shut down.
+INFO  11:04:33 Application started. Press Ctrl+C to shut down.
+INFO  11:04:33 Hosting environment: Development
+INFO  11:04:33 Hosting environment: Development
+INFO  11:04:33 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  11:04:33 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  01:59:40 Application started. Press Ctrl+C to shut down.
+INFO  01:59:40 Application started. Press Ctrl+C to shut down.
+INFO  01:59:40 Hosting environment: Development
+INFO  01:59:40 Hosting environment: Development
+INFO  01:59:40 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  01:59:40 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  02:00:35 Subscription Request is raised from client side and input is prescription details
+INFO  02:00:37 DruApi si being called to check for the availability of the particular drug
+INFO  02:01:09 Drug Available
+INFO  02:01:28 Subscription Request is raised from client side and input is prescription details
+INFO  02:01:28 DruApi si being called to check for the availability of the particular drug
+INFO  02:02:53 Application started. Press Ctrl+C to shut down.
+INFO  02:02:53 Application started. Press Ctrl+C to shut down.
+INFO  02:02:53 Hosting environment: Development
+INFO  02:02:53 Hosting environment: Development
+INFO  02:02:53 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  02:02:53 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  02:03:41 Subscription Request is raised from client side and input is prescription details
+INFO  02:03:44 DruApi si being called to check for the availability of the particular drug
+INFO  03:16:23 Application started. Press Ctrl+C to shut down.
+INFO  03:16:23 Application started. Press Ctrl+C to shut down.
+INFO  03:16:23 Hosting environment: Development
+INFO  03:16:23 Hosting environment: Development
+INFO  03:16:23 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  03:16:23 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  03:17:12 Subscription Request is raised from client side and input is prescription details
+INFO  03:17:13 DruApi si being called to check for the availability of the particular drug
+INFO  03:17:19 Drug Available
+INFO  03:18:59 Application started. Press Ctrl+C to shut down.
+INFO  03:18:59 Application started. Press Ctrl+C to shut down.
+INFO  03:18:59 Hosting environment: Development
+INFO  03:18:59 Hosting environment: Development
+INFO  03:18:59 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  03:18:59 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  03:19:34 Subscription Request is raised from client side and input is prescription details
+INFO  03:19:35 DruApi si being called to check for the availability of the particular drug
+INFO  03:19:41 Drug Available
+INFO  03:22:21 Application started. Press Ctrl+C to shut down.
+INFO  03:22:21 Application started. Press Ctrl+C to shut down.
+INFO  03:22:21 Hosting environment: Development
+INFO  03:22:21 Hosting environment: Development
+INFO  03:22:21 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  03:22:21 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  03:22:57 Subscription Request is raised from client side and input is prescription details
+INFO  03:22:58 DruApi si being called to check for the availability of the particular drug
+INFO  03:28:26 Application started. Press Ctrl+C to shut down.
+INFO  03:28:26 Application started. Press Ctrl+C to shut down.
+INFO  03:28:26 Hosting environment: Development
+INFO  03:28:26 Hosting environment: Development
+INFO  03:28:26 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  03:28:26 Content root path: C:\Users\shree\source\repos\SubscriptionService
+INFO  03:29:13 Subscription Request is raised from client side and input is prescription details
+INFO  03:29:14 DruApi si being called to check for the availability of the particular drug
+INFO  03:29:21 Drug NotAvailable
+INFO  03:29:52 Subscription Request is raised from client side and input is prescription details
+INFO  03:29:53 DruApi si being called to check for the availability of the particular drug
+INFO  03:29:57 Drug Available
