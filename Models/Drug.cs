@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,12 +9,20 @@ namespace SubscriptionService.Models
     public class Drug
     {
         public int Id { get; set; }
+
+        [Required]
+
         public string Name { get; set; }
-        public DateTime ManufactureDate { get; set; }
-        public DateTime EpiryDate { get; set; }
-        public string ManufacturerName { get; set; }
-        
-        public int DrugId { get; set; }
+        [Required]
+        //  [Display(Name = "ManufactureDate")]
+
+        public DateTime ManufacturedDate { get; set; }
+        [Required]
+        public DateTime ExpiryDate { get; set; }
+        [Required]
+        public string Manufacturer { get; set; }
+
+        public int Quantity { get; set; }
 
     }
 }

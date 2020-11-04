@@ -8,7 +8,7 @@ using SubscriptionService.Repository;
 using SubscriptionService.Models;
 namespace SubscriptionService.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class SubscribeController : ControllerBase
     {
