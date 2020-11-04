@@ -64,26 +64,34 @@ namespace SubscriptionService.Repository
             if(subs!=null)    
             {
                     _log4net.Info("interacting with refill microservice for the payment status of the partiular subscription id ");
-                      int count = 2;
+                  SubscriptionDetails result=new SubscriptionDetails();
+          
+          
+            using (var httpClient = new HttpClient())
+            {
+                using (var response = httpClient.GetAsync("https://localhost:44329/api/RefillOrders/RefillDues/" + SubscriptionId).Result)
+                {
 
-                    if (count>0)
+                    if (!response.IsSuccessStatusCode)
                     {
-                        _log4net.Info("Unsubscribe successfull ");
-                        //subscribed and payment successful
-                        return new SubscriptionDetails { Id = Subscription_Id, MemberId = Member_Id, MemberLocation = subs.MemberLocation, PrescriptionId = subs.PrescriptionId, RefillOccurrence = subs.RefillOccurrence, Status = true, SubscriptionDate = subs.SubscriptionDate };
+                        return result;
+                    }
 
-                    }
-                    else
+                    var data = response.Content.ReadAsStringAsync().Result;
+
+                    var due = JsonConvert.DeserializeObject<int>(data);
+                    
+                    result =subs;
+                    
+                    if(due == 0)
                     {
-                    //subscribed but payment not successfull
-                        return new SubscriptionDetails { Id = Subscription_Id, MemberId = subs.MemberId, MemberLocation = subs.MemberLocation, PrescriptionId = subs.PrescriptionId, RefillOccurrence = subs.RefillOccurrence, Status = false, SubscriptionDate = subs.SubscriptionDate };
+                      result.Status=false;
                     }
+                    
+                    return result;
+                }
             }
-            
-            _log4net.Info("Payment Due! To Unscription please clear your due payments ");
-            //not subscribed
-            return new SubscriptionDetails { Id = 0 , MemberId = 0, MemberLocation = "", PrescriptionId =0, RefillOccurrence = "", Status = false, SubscriptionDate = Convert.ToDateTime("2020-12-01 01:01:00 AM") };
-
+            }
         }
     }
 }
