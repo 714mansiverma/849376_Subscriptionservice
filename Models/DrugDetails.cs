@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SubscriptionService.Models
 {
-    public class Drug
+    public class DrugDetails
     {
         public int Id { get; set; }
 
