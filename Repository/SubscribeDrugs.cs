@@ -31,7 +31,7 @@ namespace SubscriptionService.Repository
               var drugs = "";
               var query = prescription.DrugName;
               HttpClient client = new HttpClient();
-              HttpResponseMessage result = client.GetAsync("https://localhost:44393/api/DrugsApi/GetByName/"+query ).Result;
+              HttpResponseMessage result = client.GetAsync("https://localhost:44393/api/DrugsApi/searchDrugsByName/"+query ).Result;
               if (result.IsSuccessStatusCode)
               {
                   drugs = result.Content.ReadAsStringAsync().Result;
